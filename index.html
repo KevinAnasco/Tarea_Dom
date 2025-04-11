@@ -9,16 +9,27 @@
 
 <body>
     <h1 class="titulo-principal">To-Do List</h1>
+
+    <!-- Contenedor Para la imágen -->
     <div class="contenedor-imagen">
         <img src="https://static.vecteezy.com/system/resources/previews/005/908/719/non_2x/cute-to-do-list-with-cats-and-paws-in-cartoon-doodle-style-pink-planner-with-cute-animals-illustration-vector.jpg" alt="Decoración" class="decoracion">
     </div>
 
+    <!-- Contenedor general -->
     <div class="contenedor-app">
         <div class="contenedor-entrada">
         <input type="text" id="titulo-tarea" placeholder="Nueva tarea">
         <input type="date" id="fecha-tarea">
         <button class="boton" onclick="agregarTarea()">Agregar</button>
-        </div>
+    </div>
+        
+        <!-- Contador de Tareas -->
+        <div id="contador-tareas">Tareas pendientes: 0</div>
 
+        <!-- Lista de Tareas -->
+        <div id="lista-tareas"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
