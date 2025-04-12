@@ -62,3 +62,54 @@ h1 {
     margin-bottom: 15px;
     flex-wrap: wrap;
 }
+
+input{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.boton{
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.boton:hover {
+    background-color: #218838;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tarea:hover {
+    transform: scale(1.03);
+}
+
+.tarea-completada {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+.botones-tarea {
+    display: flex;
+    gap: 5px;
+}

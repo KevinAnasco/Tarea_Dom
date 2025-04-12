@@ -31,3 +31,31 @@ function agregarTarea() {
     inputFecha.value = '';
     renderizarTareas();
 }
+
+function eliminarTarea(indice) {
+    tareas.splice(indice, 1);
+    guardarTareasEnLocalStorage();
+    renderizarTareas();
+}
+
+function completarTarea(indice) {
+    tareas[indice].completada = !tareas[indice].completada;
+    guardarTareasEnLocalStorage();
+    renderizarTareas();
+}
+
+function editarTarea(indice) {
+    const nuevaTarea = prompt('Editar tarea:', tareas[indice].titulo);
+    const nuevaFecha = prompt('Editar fecha (YYYY-MM-DD):', tareas[indice].fecha);
+
+    if (nuevaTarea !== null && nuevaTarea.trim() !== '') {
+        tareas[indice].titulo = nuevaTarea.trim();
+    }
+
+    if (nuevaFecha !== null && nuevaFecha.trim() !== '') {
+        tareas[indice].fecha = nuevaFecha.trim();
+    }
+
+    guardarTareasEnLocalStorage();
+    renderizarTareas();
+}
