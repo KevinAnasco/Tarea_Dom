@@ -1,4 +1,5 @@
 body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     flex-direction: column;
