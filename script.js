@@ -59,3 +59,31 @@ function editarTarea(indice) {
     guardarTareasEnLocalStorage();
     renderizarTareas();
 }
+
+function renderizarTareas() {
+    const listaTareas = document.getElementById('lista-tareas');
+    listaTareas.innerHTML = '';
+
+    tareas.forEach((tarea, indice) => {
+        const divTarea = document.createElement('div');
+        divTarea.classList.add('tarea');
+        if (tarea.completada) {
+            divTarea.classList.add('tarea-completada');
+        }
+
+        divTarea.innerHTML = `
+            <span class="texto-tarea">${tarea.titulo} - ${tarea.fecha}</span>
+            <div class="botones-tarea">
+                <button class="boton" onclick="completarTarea(${indice})">✔</button>
+                <button class="boton-editar" onclick="editarTarea(${indice})">✏</button>
+                <button class="boton-eliminar" onclick="eliminarTarea(${indice})">🗑</button>
+            </div>
+        `;
+
+        listaTareas.appendChild(divTarea);
+    });
+
+    actualizarContador();
+}
+
+renderizarTareas();
