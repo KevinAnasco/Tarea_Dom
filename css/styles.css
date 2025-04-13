@@ -113,3 +113,34 @@ input{
     display: flex;
     gap: 5px;
 }
+
+.boton-eliminar {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333;
+}
+
+.boton-editar {
+    background-color: #ffc107;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-editar:hover {
+    background-color: #e0a800;
+}
+
+.texto-tarea {
+    flex: 1;
+    text-align: left;
+}
+
+#contador-tareas {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
